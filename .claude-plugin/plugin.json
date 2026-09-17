@@ -1,0 +1,6 @@
+{
+  "name": "jep-guard-clawhub",
+  "version": "1.2.0",
+  "description": "Setup guidance for a manually started browser companion and local evidence recorder.",
+  "skills": "./skills/"
+}

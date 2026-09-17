@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "JEP Guard for ClawHub",
+  "version": "1.2.0",
+  "description": "Opt-in browser companion for an authenticated local evidence recorder.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "alarms",
+    "downloads"
+  ],
+  "optional_permissions": [
+    "notifications",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "optional_host_permissions": [
+    "https://clawhub.ai/*",
+    "https://*.clawhub.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "JEP Guard \u2014 Causal Accountability"
+  },
+  "icons": {
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://clawhub.ai/*",
+        "https://*.clawhub.ai/*"
+      ],
+      "js": [
+        "content-clawhub.js"
+      ],
+      "css": [
+        "content-clawhub.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+J",
+        "mac": "Command+Shift+J"
+      }
+    }
+  }
+}

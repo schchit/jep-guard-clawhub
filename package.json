@@ -1,0 +1,39 @@
+{
+  "name": "jep-guard-clawhub",
+  "version": "1.2.0",
+  "description": "Browser companion and manually started local evidence recorder; authentication required.",
+  "scripts": {
+    "build": "node --check daemon.js",
+    "test": "node --test tests/*.test.js",
+    "daemon": "node daemon.js",
+    "start": "node daemon.js"
+  },
+  "keywords": [
+    "jep",
+    "guard",
+    "clawhub",
+    "browser-extension",
+    "accountability",
+    "security"
+  ],
+  "license": "MIT-0",
+  "author": "hjs-foundation",
+  "homepage": "https://clawhub.ai/schchit/plugins/jep-guard-clawhub",
+  "clawhub": {
+    "type": "browser-extension",
+    "targets": [
+      "chrome",
+      "firefox",
+      "edge",
+      "brave"
+    ],
+    "entry": "manifest.json"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "jep-guard-daemon": "./daemon.js"
+  }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JEP Guard</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="app">
+  <div class="header">
+    <div class="brand">
+      <span class="shield">🛡️</span>
+      <div>
+        <h1>JEP Guard</h1>
+        <span class="version">v1.2.0</span>
+      </div>
+    </div>
+    <div class="status-pill" id="statusPill">
+      <span class="dot" id="statusDot"></span>
+      <span id="statusText">Checking…</span>
+    </div>
+  </div>
+
+  <div class="consent-banner" id="consentBanner" style="display:none">
+    <div class="consent-content">
+      <strong>JEP Guard is paused</strong>
+      <p>Enable to start causal accountability tracing.</p>
+    </div>
+    <button class="btn-primary" id="btnGoOnboard">Get Started</button>
+  </div>
+
+  <div class="banner offline" id="offlineBanner" style="display:none">
+    <div class="banner-content">
+      <span class="banner-icon">⚠️</span>
+      <div>
+        <strong>Daemon offline</strong>
+        <p>Check that JEP Guard is running on <code>localhost:9745</code></p>
+      </div>
+    </div>
+    <button class="btn-ghost" id="btnRetry">Retry</button>
+  </div>
+
+  <div class="session-card" id="sessionCard" style="display:none">
+    <div class="session-title">Active Session</div>
+    <div class="session-skill" id="activeSkill">No active skill</div>
+    <div class="session-meta" id="activeMeta">Daemon idle</div>
+  </div>
+
+  <div class="graph-section" id="graphSection" style="display:none">
+    <div class="section-header">
+      <h2>Session Graph</h2>
+      <button class="btn-text" id="btnExpandGraph">Expand →</button>
+    </div>
+    <div class="graph-canvas" id="graphCanvas">
+      <div class="graph-empty">No active sessions.</div>
+    </div>
+  </div>
+
+  <div class="stats" id="statsSection" style="display:none">
+    <div class="stat-card accent-total">
+      <div class="stat-label">Total</div>
+      <div class="stat-value" id="statTotal">—</div>
+    </div>
+    <div class="stat-card accent-j">
+      <div class="stat-label">Judge</div>
+      <div class="stat-value" id="statJ">—</div>
+    </div>
+    <div class="stat-card accent-d">
+      <div class="stat-label">Delegate</div>
+      <div class="stat-value" id="statD">—</div>
+    </div>
+    <div class="stat-card accent-v">
+      <div class="stat-label">Verify</div>
+      <div class="stat-value" id="statV">—</div>
+    </div>
+    <div class="stat-card accent-t">
+      <div class="stat-label">Terminate</div>
+      <div class="stat-value" id="statT">—</div>
+    </div>
+    <div class="stat-card accent-skill">
+      <div class="stat-label">Skills</div>
+      <div class="stat-value" id="statSkills">—</div>
+    </div>
+  </div>
+
+  <div class="section" id="chainSection" style="display:none">
+    <div class="section-header">
+      <h2>Recent Chain</h2>
+      <button class="btn-text" id="btnViewAll">View all →</button>
+    </div>
+    <div class="chain-list" id="chainList">
+      <div class="empty">No events yet.</div>
+    </div>
+  </div>
+
+  <div class="section" id="skillSection" style="display:none">
+    <div class="section-header">
+      <h2>Skills</h2>
+      <button class="btn-ghost" id="btnRefreshSkills">🔄</button>
+    </div>
+    <div class="skill-list" id="skillList">
+      <div class="empty">No skills registered.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button class="btn-secondary" id="btnOpenOptions">⚙️ Settings</button>
+    <button class="btn-secondary" id="btnExport" style="display:none">📥 Export</button>
+    <button class="btn-danger" id="btnPause" style="display:none">⏸ Pause</button>
+  </div>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
