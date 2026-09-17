@@ -1,0 +1,22 @@
+{
+  "id": "jep-guard-clawhub",
+  "name": "JEP Guard for ClawHub",
+  "version": "1.2.0",
+  "description": "On-demand local recorder health check and browser companion setup.",
+  "categories": ["security"],
+  "skills": ["./skills"],
+  "contracts": { "tools": ["jep_guard_health"] },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "port": {
+        "type": "integer",
+        "minimum": 1024,
+        "maximum": 65535,
+        "default": 9745,
+        "description": "Port of the manually started recorder on 127.0.0.1."
+      }
+    }
+  }
+}

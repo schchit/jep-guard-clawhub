@@ -61,7 +61,7 @@ test('remote daemon URLs and content-script config writes are rejected',()=>{
 });
 test('extension pages contain no inline script and consistent versions',()=>{
  for(const name of ['onboarding','report'])assert(!/<script>/.test(fs.readFileSync(new URL('../'+name+'.html',import.meta.url),'utf8')));
- for(const name of ['package.json','manifest.json','clawhub.json','.codex-plugin/plugin.json','.claude-plugin/plugin.json'])assert.equal(JSON.parse(fs.readFileSync(new URL('../'+name,import.meta.url),'utf8')).version,'1.2.0');
+ for(const name of ['package.json','manifest.json','clawhub.json','openclaw.plugin.json'])assert.equal(JSON.parse(fs.readFileSync(new URL('../'+name,import.meta.url),'utf8')).version,'1.2.0');
 });
 
 test('new credentials are private and never reuse the legacy state token',t=>{

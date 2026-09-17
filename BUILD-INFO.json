@@ -1,19 +1,24 @@
 {
   "package": "jep-guard-clawhub",
   "version": "1.2.0",
-  "status": "repair-candidate",
-  "localSourceCommit": "b209b85557ae65e84f013eeb84451595af2223bc",
-  "remoteSourceCommitVerified": false,
-  "generatedPlatformFilesExcluded": [
-    "skill-card.md"
-  ],
+  "status": "publication-fix-candidate",
+  "sourceRepository": "https://github.com/schchit/jep-guard-clawhub",
+  "baseSourceCommit": "c69a136fca1ae3c85e5e692f05b8631fb521d8fc",
+  "sourceCommitNote": "Use the exact new commit supplied with this archive; baseSourceCommit identifies the superseded bundle.",
+  "packageFamily": "code-plugin",
+  "openclawTarget": "2026.9.4",
+  "validation": {
+    "nodeTestsPassed": 21,
+    "nodeTestsSkipped": 0,
+    "realLoopbackHealthTests": true,
+    "fullInstalledGatewayAndChromiumIntegration": false,
+    "clawhubSecurityAuditComplete": false
+  },
   "filesSha256": {
-    ".claude-plugin/plugin.json": "d5ea4a18844a009ba601718aea95f94d94a17445747ba0982dc78de6db2566fa",
-    ".codex-plugin/plugin.json": "f6423c91f380b2652ad29410629eca8c04d95458aa8b2ed12a09016bd8da1679",
-    "README.md": "02cebb851e2e05012d0887db90d9faf739f71b5ee6ed0751a14cc416d493b250",
-    "UPLOAD-README-zh.md": "dd44b82711ca720f5a0bf00d86d92d0c7959395ee617e436a66262980a13b32f",
+    "README.md": "9d2fe04e5e41dd7465b47c326a29147cea74a9cbb7c74aa64279d6c8acdd98dc",
+    "UPLOAD-README-zh.md": "8097e45ced391481155ab24388d5d44f41541065ef414b829c57ec28128817e3",
     "background.js": "c9b9e0a70c8ad91a07806a07190c39f654f859a34b4ed60e37e00c1e7837385f",
-    "clawhub.json": "c9d68861997bc36ee4ca00e41c1fde13144046ed6fe123945635fbc096040fe9",
+    "clawhub.json": "b512bed1b5ef6b4122ce777001a619b7a6e7cf41855ebcdbb20d4becd5ec1b93",
     "content-clawhub.css": "78ad6d4e9129ccfa32031ddf6c06f12171533a0d85167ba50fe7c7b0f8d74581",
     "content-clawhub.js": "d8b9fbb57d0f63cdf843e6141d93d952615c995dc7e5fc0229df5468944361b1",
     "daemon.js": "22f0b0123db002729f35a788aba34ef8fc16595255cfaf24134d9de8634b1a2a",
@@ -23,18 +28,21 @@
     "manifest.json": "7686c9f5446dc3d6e8a27c844e93b1fe1b23bb284eae8b772bd5b87bb55b853e",
     "onboarding.html": "8c7ac5f4fa1de5d750a3e3ee854cab499585ab1af531eaa62b50a035397d5a00",
     "onboarding.js": "e812906f84e50c2383a97ea0d6d3a9fc2708fe232ed26153d884ca600e1937f1",
+    "openclaw.js": "82a9a8b94478eac5f38da9ef231caabad7b9be543d2578a5d5674df6694f2d6e",
+    "openclaw.plugin.json": "155666001d571c1c09e8d7f9d9891d7f09558650154d6807fc276d91fd53759f",
     "options.css": "c64ed6d0cb771f851ffa16b232ecf6cf1a0841d287fcf25de0894bec1b80da2d",
     "options.html": "86456df6a9126521f5e23ed11c5031ad684fc1c43283047bd3aa372a40cb3bc8",
     "options.js": "071579a80e1f0913dddd94c76c53810a8a7eaf5df519babbdcbaf31747a9635b",
-    "package.json": "f19117ce58ebfbdba734e702369ea5aa03a9744bb3be610e50c17da9060c199c",
+    "package.json": "4f0eccdbbd6308465a619d6beef088d9eb331a99a388bac12ac515fa000eaeae",
     "popup.css": "e71f80d9285148fde68d5e8a9b1f884ccc145d1ee4fbfc1e0e529d75821bf068",
     "popup.html": "23393920ded64f5c85a518e312936d313d75f83b3e783c862db631886350c0b4",
     "popup.js": "4c7ed0e46777ed96580e0d70ffa723b1017c83f3f7c803133356071da529f540",
     "report.html": "e59a502591801a3c08af3e432b4a30e0697e86f46d69df98a99330d617f0c155",
     "report.js": "f5ad60ba369d4e9ad14abd155083ba40c7110af65671d7cdb2c8046f41b6e9f1",
-    "skills/jep-guard/SKILL.md": "110ebb9afa26e9f64fbbd45dd67c7b5bb1ce756a2762625563aa30cfb2c0ff2f",
+    "skills/jep-guard/SKILL.md": "a34d11bb7069102aa0e09dc025d0411dbe49eda729f17c840147ba335d8c510a",
     "start.bat": "422f414453f8a46de63ea9cdb360fe2ea76df4e6febb00644713af236dee4eba",
     "start.sh": "f6f28245a8f69757e6d6780087c40b0043a99427ca90c6830205de5968619868",
-    "tests/security.test.js": "83aacd55332f8b0c74bc195cfe6577fbf87050726d97eff5c126ee8727ba071e"
+    "tests/openclaw.test.js": "82f5add3dea0fd74cb1b5dd7fa799cd8aa4af928df7396c6811ff86158ca08b3",
+    "tests/security.test.js": "4210cf486f1e8ca2974dfd6ca8b060558a24763aae7c47b7bf0ce6e47bcd913d"
   }
 }

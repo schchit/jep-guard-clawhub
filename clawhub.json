@@ -3,24 +3,15 @@
   "name": "JEP Guard for ClawHub",
   "version": "1.2.0",
   "description": "Causal accountability browser companion for the ClawHub ecosystem.",
-  "type": "bundle",
-  "format": "browser-extension",
-  "entry": "manifest.json",
+  "type": "code-plugin",
+  "format": "openclaw",
+  "entry": "openclaw.js",
   "hosts": [
     {
-      "target": "chrome"
-    },
-    {
-      "target": "firefox"
-    },
-    {
-      "target": "edge"
-    },
-    {
-      "target": "brave"
+      "target": "openclaw"
     }
   ],
   "author": "hjs-foundation",
   "license": "MIT-0",
-  "homepage": "https://github.com/hjs-foundation/jep-guard"
+  "homepage": "https://github.com/schchit/jep-guard-clawhub"
 }
